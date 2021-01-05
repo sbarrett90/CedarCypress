@@ -20,9 +20,9 @@ on:
     types: [created]
 
 env:
-  AZURE_WEBAPP_NAME: your-app-name    # set this to your application's name
-  AZURE_WEBAPP_PACKAGE_PATH: '.'      # set this to the path to your web app project, defaults to the repository root
-  NODE_VERSION: '10.x'                # set this to the node version to use
+  https://cedarcypresstax.azurewebsites.net: cedarcypresstax    # set this to your application's name
+  C:\Users\12067\Desktop\CCT Website\CedarCypressTax: '/'      # set this to the path to your web app project, defaults to the repository root
+  NODE_VERSION: '12.16.2'                # set this to the node version to use
 
 jobs:
   build-and-deploy:
@@ -44,6 +44,6 @@ jobs:
     - name: 'Deploy to Azure WebApp'
       uses: azure/webapps-deploy@v2
       with:
-        app-name: ${{ env.AZURE_WEBAPP_NAME }}
+        app-name: ${{ env.https://cedarcypresstax.azurewebsites.net }}
         publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
-        package: ${{ env.AZURE_WEBAPP_PACKAGE_PATH }}
+        package: ${{ env.C:\Users\12067\Desktop\CCT Website\CedarCypressTax }}
